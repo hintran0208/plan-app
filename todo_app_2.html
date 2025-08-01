@@ -75,25 +75,37 @@
 </head>
 <body>
     <div class="app-container">
-        <h1>Modern To-Do</h1>
-        <div class="input-group">
-            <input type="text" placeholder="What's on your mind?">
-            <button class="add-btn">Add</button>
-        </div>
-        <div class="tasks">
-            <div class="task">
-                <input type="checkbox" id="task1">
-                <label for="task1">Design a new logo</label>
+        <header>
+            <h1>Modern To-Do</h1>
+        </header>
+        <main>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="What's on your mind?">
+                <button id="addTaskBtn" class="add-btn">Add</button>
             </div>
-            <div class="task completed">
-                <input type="checkbox" id="task2" checked>
-                <label for="task2">Brainstorm project ideas</label>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
             </div>
-            <div class="task">
-                <input type="checkbox" id="task3">
-                <label for="task3">Create a presentation</label>
+            <div class="tasks" id="taskList">
+                <div class="task">
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Design a new logo</label>
+                </div>
+                <div class="task completed">
+                    <input type="checkbox" id="task2" checked>
+                    <label for="task2">Brainstorm project ideas</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" id="task3">
+                    <label for="task3">Create a presentation</label>
+                </div>
             </div>
-        </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Modern To-Do</p>
+        </footer>
     </div>
 </body>
 </html>
