@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App - Variation 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .app-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 500px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 600;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            font-size: 1rem;
+        }
+        input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        button.add-btn {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            background: #ff758c;
+            color: white;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .task {
+            background: rgba(0,0,0,0.2);
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .task input[type="checkbox"] {
+            margin-right: 1rem;
+        }
+        .task label {
+            flex-grow: 1;
+        }
+        .task.completed label {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Modern To-Do</h1>
+        <div class="input-group">
+            <input type="text" placeholder="What's on your mind?">
+            <button class="add-btn">Add</button>
+        </div>
+        <div class="tasks">
+            <div class="task">
+                <input type="checkbox" id="task1">
+                <label for="task1">Design a new logo</label>
+            </div>
+            <div class="task completed">
+                <input type="checkbox" id="task2" checked>
+                <label for="task2">Brainstorm project ideas</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3">
+                <label for="task3">Create a presentation</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
